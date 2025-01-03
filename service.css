@@ -1,0 +1,206 @@
+body {
+    background: black;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ------------------ Nav Bar --------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: auto; 
+    min-height: 60px;
+}
+
+header .logo {
+    font-size: 43px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.logo .highlight {
+    color: red;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 5px 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, red, #00a3cc);
+    border: none;
+    border-radius: 27% 0% / 80% 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0px 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+header nav a::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, #ffffff33 20%, transparent 30%);
+    background-size: 50px 50px;
+    animation: move-stars 6s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Zoom-in effect */
+    background: linear-gradient(135deg, #00a3cc, #ffffff33);
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.8);
+}
+
+header nav a:hover::before {
+    opacity: 1;
+}
+
+header nav a span {
+    position: relative;
+    z-index: 2;
+}
+
+/* -------------- Animation for moving -------------- */
+
+@keyframes move-stars {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100px, -100px);
+    }
+}
+
+/* -------------- Media Query -------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the logo and nav vertically */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add spacing between logo and nav */
+    }
+
+    header nav {
+        justify-content: center; /* Center nav items */
+    }
+
+    header nav a {
+        padding: 5px 10px; /* Make nav items smaller */
+        font-size: 0.8rem; /* Further reduce font size for small screens */
+    }
+}
+
+/* ------------------ Services --------------------*/
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #ffba00;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 157, 0, 0.566);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+}
+
+.service-box:hover {
+    transform: scale(1.1) rotateX(10deg);
+    box-shadow: 0px 0px 20px #00d1ff, 0px 0px 50px #68d0e8;
+}
+
+.service-box .icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00d1ff;
+    animation: pulse 1.5s infinite;
+}
+
+.service-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00d1ff;
+    text-transform: uppercase;
+}
+
+.service-box p {
+    font-size: 1em;
+    color: #c4c4c4;
+    line-height: 1.5;
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-45deg);
+    transition: left 0.7s;
+}
+
+.service-box:hover::before {
+    left: 100%;
+}
+
+/* Pulse Effect for Icons */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}

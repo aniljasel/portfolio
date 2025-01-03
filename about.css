@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, black, black);
+    color: #ffffff;
+}
+
+/* ------------------ Nav Bar --------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: auto; 
+    min-height: 60px;
+}
+
+header .logo {
+    font-size: 43px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.logo .highlight {
+    color: red;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 5px 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, red, #00a3cc);
+    border: none;
+    border-radius: 27% 0% / 80% 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0px 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+header nav a::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, #ffffff33 20%, transparent 30%);
+    background-size: 50px 50px;
+    animation: move-stars 6s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Zoom-in effect */
+    background: linear-gradient(135deg, #00a3cc, #ffffff33);
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.8);
+}
+
+header nav a:hover::before {
+    opacity: 1;
+}
+
+header nav a span {
+    position: relative;
+    z-index: 2;
+}
+
+/* -------------- Animation for moving -------------- */
+
+@keyframes move-stars {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100px, -100px);
+    }
+}
+
+/* -------------- Media Query -------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the logo and nav vertically */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add spacing between logo and nav */
+    }
+
+    header nav {
+        justify-content: center; /* Center nav items */
+    }
+
+    header nav a {
+        padding: 5px 10px; /* Make nav items smaller */
+        font-size: 0.8rem; /* Further reduce font size for small screens */
+    }
+}
+
+
+/*----------------- Profile pic -----------------*/
+
+.image-container {
+    position: relative;
+    margin: 70px;
+    text-align: auto;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #00d1ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 20px #00d1ff, 0 0 50px #00d1ff;
+}
+
+/* ------------------ About --------------------*/
+
+.about-section {
+    padding: auto 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ------------------ Info --------------------*/
+
+.info-section {
+    flex: 2;
+    max-width: 600px;
+    margin: 20px;
+}
+
+h1 {
+    color: red;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.info-section .dif {
+    color: white;
+    font-weight: bold;
+}
+
+.info-section .highlight {
+    color: #00d1ff;
+    font-weight: bold;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.details a {
+    color: #ffba00;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .info-section h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .info-section h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .info-section h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .info-section p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}

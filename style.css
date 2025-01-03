@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, black, black);
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: auto; 
+    min-height: 60px;
+}
+
+header .logo {
+    font-size: 43px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.logo .highlight {
+    color: red;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 5px 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, red, #00a3cc);
+    border: none;
+    border-radius: 27% 0% / 80% 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0px 2px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 209, 255, 0.5);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+header nav a::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, #ffffff33 20%, transparent 30%);
+    background-size: 50px 50px;
+    animation: move-stars 6s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+header nav a:hover {
+    transform: scale(1.1); /* Zoom-in effect */
+    background: linear-gradient(135deg, #00a3cc, #ffffff33);
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.8);
+}
+
+header nav a:hover::before {
+    opacity: 1;
+}
+
+header nav a span {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the logo and nav vertically */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add spacing between logo and nav */
+    }
+
+    header nav {
+        justify-content: center; /* Center nav items */
+    }
+
+    header nav a {
+        padding: 5px 10px; /* Make nav items smaller */
+        font-size: 0.8rem; /* Further reduce font size for small screens */
+    }
+}
+
+/* -------------- Main Content -------------- */
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: black;
+}
+
+.content {
+    max-width: 600px;
+    margin: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #00d1ff;
+}
+
+.content .dif {
+    color: white;
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin: 1px 0;
+}
+
+.content h3 {
+    font-size: 2rem;
+    margin: 1px 0;
+    color: #ffba00;
+}
+
+.content h3 .highlight {
+    color: #00d1ff;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 1px 0;
+}
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: left;  /* Center the icons horizontally */
+    align-items: center;      /* Vertically center icons if necessary */
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 43px; /* Size of the circle */
+    height: 43px; /* Size of the circle */
+    border-radius: 50%; /* Make the background circular */
+    background-color: transparent; /* Transparent background */
+    border: 3px solid #ffffff; /* Blue border (stroke) around the icon */
+    overflow: hidden; /* Ensures that the image stays inside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.social-icons .icon {
+    width: 30px; /* Size of the icon */
+    height: 30px; /* Size of the icon */
+    object-fit: cover; /* Ensures image fits inside the circle */
+}
+
+/* Optional: Hover effect to change the border color */
+.social-icons a:hover {
+    border-color: #ff0000; /* Darker blue border on hover */
+}
+
+
+.content .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #ffffff;
+    background: linear-gradient(135deg, red, #00a3cc);
+    border: none;
+    border-radius: 20% 0% / 80% 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.content .btn::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, #ffffff33 20%, transparent 30%);
+    background-size: 50px 50px;
+    animation: move-stars 6s linear infinite;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.content .btn:hover {
+    transform: scale(1.1); /* Zoom-in effect */
+    background: linear-gradient(135deg, #00a3cc, red);
+    box-shadow: 0 6px 20px rgba(0, 209, 255, 0.8);
+}
+
+.content .btn:hover::before {
+    opacity: 1;
+}
+
+.content .btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation for moving stars */
+@keyframes move-stars {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100px, -100px);
+    }
+}
+
+.image-container {
+    margin: 20px;
+    position: relative;
+}
+
+.image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 8px solid #00d1ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 20px #00d1ff, 0 0 50px #00d1ff;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent, #00d1ff33, #00d1ff11);
+    z-index: -1;
+    animation: glow 3s infinite alternate;
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        width: 250px; /* Adjust size for smaller screens */
+        height: 250px;
+    }
+
+    .image-container::before {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@keyframes glow {
+    from {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .social-icons{
+        justify-content: center;
+        padding: 0 10px;
+    }
+    .social-icons {
+        justify-content: center;
+        padding: 0 10px;  /* Optional: add some padding on the sides for mobile */
+    }
+    .content {
+        display: flex;
+        justify-content: center;  /* Center the button horizontally */
+        align-items: center;      /* Center the button vertically if needed */
+        flex-direction: column;   /* Stack the elements vertically */
+    }
+    .content .btn {
+        width: auto;  /* Let the button adjust to its content width */
+        margin-top: 20px;
+    }
+}
