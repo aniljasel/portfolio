@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="contact.css">
+    <link act
 </head>
 
 <body>
@@ -22,11 +23,11 @@
     </header>
     <div class="contact-section">
         <h1>Get In Touch</h1>
-        <form class="contact-form">
-            <input type="text" placeholder="Full Name..." required>
-            <input type="email" placeholder="Email Id..." required>
-            <input type="tel" placeholder="Mobile No..." required>
-            <textarea placeholder="Enter your Address..." rows="4" required></textarea>
+        <form class="contact-form" action="save_data.php" method="POST">
+            <input type="text" name="fullname" placeholder="Full Name..." required>
+            <input type="email" name="email" placeholder="Email Id..." required>
+            <input type="tel" name="mobile" placeholder="Mobile No..." required>
+            <textarea name="mobile" placeholder="Enter your Address..." rows="4" required></textarea>
             <button type="submit">Submit</button>
         </form>
         <div class="contact-info">
