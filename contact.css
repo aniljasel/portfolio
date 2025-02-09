@@ -195,18 +195,3 @@ header nav a span {
     font-size: 14px;
     line-height: 1.5;
 }
-
-@media (max-width: 768px) {
-    .contact-form input,.contact-form textarea {
-        width: 93%;    
-    }
-    .contact-form button {
-        width: 100%;
-    }
-    .info-item {
-        margin-left: 0;
-    }
-    .info-item {
-        margin-left: 0;
-    }
-}
