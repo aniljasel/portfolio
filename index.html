@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
 </head>
 <body>
+    <div class="cursor"></div>
     <header>
         <div class="logo">Port<span class="highlight">folio</span></div>
         <nav>
@@ -14,7 +16,7 @@
             <a href="about.html">About</a>
             <a href="service.html">Services</a>
             <a href="skills.html">Skills</a>
-            <a href="#projects">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
@@ -25,16 +27,157 @@
             <h3>And I'm a <span class="highlight">Web Developer</span></h3>
             <p> I'm a web designer with extensive experience for over 3 years.</p>
             <div class="social-icons">
-                <a href="#"><img src="media/instagram.png" class="icon" alt="Instagram"></a>
-                <a href="#"><img src="media/facebook.png" class="icon" alt="facebook"></a>
-                <a href="#"><img src="media/linkdin.png" class="icon" alt="linkdin"></a>
-                <a href="#"><img src="media/github.png" class="icon" alt="github"></a>
+                <a href="https://www.instagram.com/mr._.anil_kumar/" target="_blank"><img src="media/instagram.png" class="icon" alt="Instagram"></a>
+                <a href="https://www.facebook.com/anilkumar.jasel/" target="_blank"><img src="media/facebook.png" class="icon" alt="facebook"></a>
+                <a href="https://www.linkedin.com/in/mr-anil-kumar/" target="_blank"><img src="media/linkdin.png" class="icon" alt="linkdin"></a>
+                <a href="https://github.com/aniljasel" target="_blank"><img src="media/github.png" class="icon" alt="github"></a>
             </div>
-            <a href="#about" class="btn">More About Me</a>
         </div>
         <div class="image-container">
-            <img src="media/profile.png" alt="Profile Picture">
+            <img src="media/profile.jpeg" alt="Profile Picture">
         </div>
     </section>
+
+    <!---------------- ABOUT SECTION START---------->
+    <div class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="media/profile.jpeg" alt="Profile Picture">
+            </div>
+            <div class="info-section">
+                <h1>About<span class="dif"> Me</span></h1>
+                <h2>Your most<span class="highlight"> Welcome</span></h2>
+                <h3>I'm a <span class="highlight">Web Developer</span> and <span class="highlight">Office 365 Expert ....</span></h3>
+                <p class="intro">
+                    
+                    
+                </p>
+                <div class="details">
+                    <div><strong>Name:</strong> Anil Kumar</div>
+                    <div><strong>Email:</strong> anilkumar@gmail.com</div>
+                    <div><strong>Birthday:</strong> 20 Jun, 2005</div>
+                    <div><strong>Study:</strong> Poornima University, Jaipur</div>
+                    <div><strong>Phone:</strong> (+91) 805-851-XXX</div>
+                    <div><strong>City:</strong> Jaipur, India</div>
+                    <div><strong>Freelancer:</strong> Available</div>
+                    <div><strong>Website:</strong> <a href="">www.giggleflics.com</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------Skill section ----------------->
+    <div class="skills-section">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+            <div class="progress-bars">
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">HTML</span>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">CSS</span>
+                        <span class="percentage">75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="percentage">25%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">C</span>
+                        <span class="percentage">70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Circular Charts (unchanged) -->
+            <div class="circular-charts">
+                <div class="chart" data-percentage="80">
+                    <svg>
+                        <circle cx="60" cy="60" r="55"></circle>
+                        <circle cx="60" cy="60" r="55"></circle>
+                    </svg>
+                    <div class="chart-text">Hindi</div>
+                </div>
+                <div class="chart" data-percentage="85">
+                    <svg>
+                        <circle cx="60" cy="60" r="55"></circle>
+                        <circle cx="60" cy="60" r="55"></circle>
+                    </svg>
+                    <div class="chart-text">English</div>
+                </div>
+                    <div class="chart-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----------------Contact Section ----------------->
+<div class="contact-section">
+    <h1>Get In Touch</h1>
+    <form class="contact-form" action="https://formspree.io/f/mrbboaob" method="POST">
+        <input type="text" name="fullname" placeholder="Full Name..." required>
+        <input type="text" name="CompanyName" placeholder="Company Name...">
+        <input type="email" name="email" placeholder="Email Id..." required>
+        <input type="tel" name="mobile" placeholder="Mobile No..." required>
+        <textarea name="mobile" placeholder="Enter your Address..." rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="contact-info">
+        <div class="info-item">
+            <img src="media/location.png" class="icon">
+            <h3>Address</h3>
+            <p>Jaipur (Rajasthan) <br> India </p>
+        </div>
+        <div class="info-item">
+            <img src="media/call.png" class="icon">
+            <h3>Phone</h3>
+            <p>+91 805-851-XXX</p>
+        </div>
+        <div class="info-item">
+            <img src="media/mail.png" class="icon">
+            <h3>Email</h3>
+            <p>anilkumar@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Copyright © 2025 | Anil Kumar.</p>
+</footer>
+
+<script src="cursor.js"></script>
+<script type="text/javascript">
+    options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "circle-move",
+      "hoverItemMove": false,
+      "defaultCursor": false,
+      "outerWidth": 20,
+      "outerHeight": 20
+    }
+    magicMouse(options);
+    
+</script>	
+
 </body>
 </html>
