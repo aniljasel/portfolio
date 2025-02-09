@@ -7,9 +7,11 @@
     <link rel="pro icon" href="media/pro.png">
     <title>My Projects</title>
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="cursor.css">
 </head>
 
 <body>
+    <div class="cursor"></div>
     <header>
         <div class="logo">Port<span class="highlight">folio</span></div>
         <nav>
@@ -61,7 +63,19 @@
         </div>
 
     </div>
-
+    <script src="cursor.js"></script>
+    <script type="text/javascript">
+    options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "circle-move",
+      "hoverItemMove": false,
+      "defaultCursor": false,
+      "outerWidth": 20,
+      "outerHeight": 20
+    }
+    magicMouse(options);
+    
+</script>
 </body>
 
 </html>
