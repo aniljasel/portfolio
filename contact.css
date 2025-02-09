@@ -124,11 +124,18 @@ header nav a span {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    margin-top: 200px;
 }
 
 .contact-section h1 {
     color: #ffba00;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px){
+    .contact-section h1{
+        font-size: 35px;
+    }
 }
 
 /* ------------Form Styling-------------- */
@@ -165,6 +172,16 @@ header nav a span {
     background-color: #e0a800;
 }
 
+
+@media (max-width: 768px){
+    .contact-form{
+        margin-right: 20px;
+    }
+    .contact-form button{
+        width: 320px;
+    }
+}
+
 /* ----------------Contact Info Styling------------- */
 .contact-info {
     display: flex;
@@ -194,4 +211,22 @@ header nav a span {
 .info-item p {
     font-size: 14px;
     line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .info-item {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .info-item p {
+        font-size: 12px;
+    }
 }
