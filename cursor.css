@@ -1,0 +1,32 @@
+body #magicMouseCursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid cyan;
+    background: rgba(0, 255, 204, 0.1);
+    border-radius: 50%;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    transition: transform 0.07s, width 0.3s, height 0.3s, background 0.3s;
+    pointer-events: none;
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan;
+  }
+  
+  body #magicMouseCursor.cursor-ripple {
+    background: rgba(0, 255, 204, 0.3);
+    transform: scale(1.5);
+  }
+  
+  @keyframes trailEffect {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+  }
+  
+  body .magic-hover {
+    transition: all 0.2s;
+  }
+  
+  body .magic-hover:hover {
+    cursor: none;
+  }
