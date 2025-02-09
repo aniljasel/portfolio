@@ -115,10 +115,11 @@ header nav a span {
     }
 }
 
-/* S---------------kills Section------------------ */
+/* ---------------kills Section------------------ */
 
 .skills-section {
     text-align: center;
+    margin-top: 200px;
 }
 
 .skills-section h1 {
@@ -134,6 +135,14 @@ header nav a span {
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: row;
+        align-items: row;
+        margin-left: 10px
+    }
 }
 
 .progress-bars {
@@ -178,11 +187,9 @@ header nav a span {
 
 .circular-charts {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    flex: 1;
-    margin: 30px;
-    margin-top: -2%;
+    flex-wrap: nowrap;
+    margin-top: 20px;
 }
 
 .chart {
