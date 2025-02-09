@@ -246,25 +246,32 @@ header nav a span {
     height: 300px;
     border-radius: 50%;
     border: 8px solid #00d1ff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 20px #00d1ff, 0 0 50px #00d1ff;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+	cursor: zoom-in;
 }
 
-.image-container::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent, #00d1ff33, #00d1ff11);
-    z-index: -1;
-    animation: glow 3s infinite alternate;
+.image-container img:hover {
+	transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px #00d1ff, 0 0 50px #00d1ff;
+}
+
+footer {
+    color: #aeaeae;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 @media (max-width: 768px) {
     .image-container img {
-        width: 250px; /* Adjust size for smaller screens */
+        width: 250px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8), 0 0 2px #00d1ff, 0 0 50px #00d1ff;
         height: 250px;
     }
 
@@ -322,5 +329,325 @@ header nav a span {
     .content .btn {
         width: auto;  /* Let the button adjust to its content width */
         margin-top: 20px;
+    }
+}
+
+
+/* ------------------ About --------------------*/
+
+.about-section {
+    padding: auto 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 90px;
+}
+
+.about-image img {
+    width: 37%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: zoom-in;
+    margin-left: 40px;
+    margin-top: 100px;
+}
+
+.about-image img:hover {
+	transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px #00d1ff, 0 0 50px #00d1ff;
+}
+
+@media (max-width: 768px) {
+    .about-image img {
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8), 0 0 2px #00d1ff, 0 0 50px #00d1ff;
+        margin-left: 10px;
+        
+    }
+}
+/* ------------------ Info --------------------*/
+
+.info-section {
+    flex: 1;
+    max-width: 600px;
+    margin-left: -500px;
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        margin-left: 15px;
+    }
+}
+
+h1 {
+    color: red;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.info-section .dif {
+    color: white;
+    font-weight: bold;
+}
+
+.info-section .highlight {
+    color: #00d1ff;
+    font-weight: bold;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    line-height: 1.6;
+}
+
+.details a {
+    color: #ffba00;
+    text-decoration: none;
+}
+
+
+/* S---------------kills Section------------------ */
+
+.skills-section {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.skills-section h1 {
+    font-size: 3rem;
+    color: #ffba00;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: row;
+        align-items: row;
+        margin-left: 10px
+    }
+}
+
+.progress-bars {
+    flex: 1;
+    margin: 10px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.percentage {
+    font-size: 0.9rem;
+    color: #ffba00;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #ffba00;
+}
+
+/* ------------------Circular Charts-------------- */
+
+.circular-charts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
+.chart {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 40px;
+}
+
+.chart svg {
+    width: 110%;
+    height: 110%;
+    transform: rotate(-90deg);
+}
+
+.chart circle {
+    fill: none;
+    stroke-width: 5;
+    cx: 50;
+    cy: 50;
+    r: 45;
+}
+
+.chart circle:first-child {
+    stroke: #555;
+}
+
+.chart circle:last-child {
+    stroke: #ffba00;
+    stroke-dasharray: 300;
+    stroke-dashoffset: calc(230 - (230 * var(--percentage)) / 100);
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.chart-text {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+/* ---------Contact Section -----------*/
+
+.contact-section {
+    max-width: 600px;
+    margin: auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.contact-section h1 {
+    color: #ffba00;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px){
+    .contact-section h1{
+        font-size: 35px;
+    }
+}
+
+/* ------------Form Styling-------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #d5d5d5;
+    color: #000000;
+}
+
+.contact-form button {
+    width: 103.5%;
+    padding: 10px;
+    border: none;
+    background-color: #ffba00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e0a800;
+}
+
+
+@media (max-width: 768px){
+    .contact-form{
+        margin-right: 20px;
+    }
+    .contact-form button{
+        width: 320px;
+    }
+}
+
+/* ----------------Contact Info Styling------------- */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    text-align: center;
+    margin-left: 40px;
+}
+
+.info-item img {
+    width: 30px; 
+    height: 30px; 
+    object-fit: cover;
+    border: 3px solid #ffba00;
+    border-radius: 50%;
+}
+
+.info-item h3 {
+    margin-bottom: 5px;
+    color: #ffba00;
+}
+
+.info-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .info-item {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .info-item p {
+        font-size: 12px;
     }
 }
