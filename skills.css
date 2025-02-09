@@ -125,6 +125,7 @@ header nav a span {
     font-size: 3rem;
     color: #ffba00;
     margin-bottom: 50px;
+    font-size: 2.5em;
 }
 
 .skills-container {
@@ -223,21 +224,4 @@ header nav a span {
     transform: translate(-50%, -50%);
     font-size: 1rem;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .skills-section h1 {
-        font-size: 2.5rem;
-    }
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .progress-bars {
-        margin: 10px 7;
-    }
-
-    .chart {
-        margin: 20px;
-    }
 }
