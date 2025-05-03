@@ -277,6 +277,7 @@ p.section-title-white {
 	box-shadow: 0 4px 15px rgba(147, 135, 1, 0.5);
 	font-weight: 500;
 	margin-bottom: 8px;
+	margin-top: 20px;
 	user-select: none;
 	-webkit-user-select: none;
 }
@@ -437,7 +438,7 @@ p.section-title-white {
 
 #navigation {
 	padding: 10px 0;
-	border-bottom: 1px solid #232434;
+	border-bottom: 0px solid #232434;
 	background-color: transparent;
 }
 
@@ -610,6 +611,7 @@ p.section-title-white {
 }
 
 /*END 575px*/
+
 /*-------------------------------
 # Dropdwon menu 
 --------------------------------*/
@@ -709,7 +711,8 @@ p.section-title-white {
 .home_bg {
 	height: 750px;
 	position: relative;
-	background: #FFFAEE;
+	background-image: url("/images/home-bg.png");
+	background-size: cover;
 }
 
 .about_me_content {
@@ -718,6 +721,9 @@ p.section-title-white {
 }
 
 @media only screen and (max-width:768px) {
+	.home_bg {
+		background: #FFFAEE;
+	}
 	.about_me_content {
 		padding-top: 120px;
 	}
@@ -823,35 +829,7 @@ p.section-title-white {
 	background: #1A90D9;
 }
 
-/* -----START profile IMAGE-----*/
-.hero_img {
-	height: auto;
-}
-
-@media only screen and (max-width:768px) {
-	.hero_img {
-		display: none;
-	}
-}
-
-.hero_img img {
-	width: 60%;
-	border-radius: 10px;
-	margin-top: 100px;
-	margin-left: 130px;
-	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.8), 0 0 2px #00d1ff, 0 0 50px #00d1ff;
-	transition: transform 0.5s ease, box-shadow 0.3s ease;
-	cursor: zoom-in;
-}
-
-.hero_img img:hover {
-	transform: scale(1.05);
-	box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
-}
-
-
 /* ------------- START ABOUT CSS STYLE ------------------------*/
-
 .about_img {
 	width: auto;
 }
