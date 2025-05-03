@@ -712,7 +712,7 @@ p.section-title-white {
 .home_bg {
 	height: 750px;
 	position: relative;
-	background-image: url("//images/home-bg.png");
+	background-image: url("/images/home-bg.png");
 	background-size: cover;
 }
 
