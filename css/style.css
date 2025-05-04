@@ -712,13 +712,8 @@ p.section-title-white {
 .home_bg {
 	height: 750px;
 	position: relative;
-	background-image: url("../images/home-bg.png");
+	background-image: url("/images/home-bg.png");
 	background-size: cover;
-}
-
-.about_me_content {
-	padding-top: 100px;
-	position: relative;
 }
 
 @media only screen and (max-width:768px) {
@@ -730,12 +725,21 @@ p.section-title-white {
 	}
 }
 
+.about_me_content {
+	padding-top: 100px;
+	position: relative;
+}
+
 .about_me_content h1 {
 	font-size: 62px;
-	margin-top: 10px;
+	margin-top: 15px;
 	font-weight: 700;
-	color: #232434;
 	font-family: 'Poppins', sans-serif;
+}
+
+.about_me_content h4 {
+	font-size: 25px;
+	font-weight: 400;
 }
 
 @media only screen and (max-width:480px) {
@@ -744,11 +748,28 @@ p.section-title-white {
 	}
 }
 
-.about_me_content>span {
-	text-transform: capitalize;
-	font-weight: 500;
-	color: #484848;
-	font-size: 20px;
+.flip-text {
+	display: inline-block;
+	font-size: 62px;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+	transition: transform 0.6s ease, color 0.3s ease;
+  }
+  
+.flip-out {
+	transform: rotateX(90deg);
+	opacity: 0;
+}
+  
+.flip-in {
+	transform: rotateX(0deg);
+	opacity: 1;
+}
+  
+@media only screen and (max-width:480px) {
+	.flip-text {
+	  font-size: 40px;
+	}
 }
 
 .basic-info {
