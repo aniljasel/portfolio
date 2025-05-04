@@ -24,7 +24,7 @@ body #magicPointer {
   top: 0;
   left: 0;
   position: fixed;
-  background: #ff0055;
+  background: #000000;
   border-radius: 50%;
   pointer-events: none;
   transition: transform 0.1s ease-out, background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s;
